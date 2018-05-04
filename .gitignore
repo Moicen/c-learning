@@ -1,3 +1,2 @@
-dist/
-!dist/data/
-site.log
+.DS_Store
+*.out
