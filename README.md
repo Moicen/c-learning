@@ -1,2 +1,2 @@
-# git-practice
-git practice
+# c-learning
+learn c 
