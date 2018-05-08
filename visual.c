@@ -1,17 +1,17 @@
 #include <stdio.h>
 
-int main(){
+int visual() {
     int c;
-    while((c = getchar()) != EOF){
-        if(c == '\t') {
+    while ((c = getchar()) != EOF) {
+        if (c == '\t') {
             c = 't';
             putchar('\\');
-        } 
-        if(c == '\b') {
+        }
+        if (c == '\b') {
             c = 'b';
             putchar('\\');
         }
-        if(c == '\\'){
+        if (c == '\\') {
             c = '\\';
             putchar('\\');
         }

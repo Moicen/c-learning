@@ -1,6 +1,6 @@
 cmake_minimum_required (VERSION 2.6)
 project (c-learning)
-add_executable(c-learning hello.c)
+add_executable(c-learning hello.c itoa.c)
 # The version number.
 set (c-learning_VERSION_MAJOR 1)
 set (c-learning_VERSION_MINOR 0)
