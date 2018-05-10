@@ -21,5 +21,9 @@ include_directories ("${PROJECT_SOURCE_DIR}/csapp")
 add_subdirectory (csapp)
 
 # add the executable
-add_executable(c-learning test.c)
-target_link_libraries (c-learning csapp)
+add_executable(pract csapp-test.c)
+target_link_libraries (pract csapp)
+
+add_library(itoa itoa.c)
+add_executable(hello hello.c)
+target_link_libraries(hello itoa)

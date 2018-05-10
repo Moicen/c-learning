@@ -1,8 +1,5 @@
 #include <stdio.h>
-
-char *int2str(char *s, int num);
-
-char *itoa(char *s, int num);
+#include "itoa.h"
 
 int main() {
     printf("Hello, world!\n");
