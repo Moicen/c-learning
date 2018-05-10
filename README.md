@@ -1,2 +1,2 @@
 # c-learning
-learn c 
+learn C and OS 

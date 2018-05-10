@@ -3,14 +3,15 @@
 #include <stdio.h>
 
 char *int2str(char *s, int num) {
-    int size = 0, n = abs(num);
+    size_t size = 0;
+    int n = abs(num);
     if (num == 0) size = 1;
     else {
         if (num < 0) size = 1;
         size += (int) ceil(log10(n));
     }
     s = (char *) malloc(size + 1);
-    int i;
+    size_t i;
     for (i = size - 1; i >= 0; i--) {
         s[i] = n % 10 + '0';
         n = (int) floor(n / 10);
@@ -20,7 +21,7 @@ char *int2str(char *s, int num) {
 }
 
 char *itoa(char *s, int n) {
-    int count = 0;
+    size_t count = 0;
     if (n == 0) {
         count = 1;
     } else {

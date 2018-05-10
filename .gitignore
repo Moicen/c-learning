@@ -2,4 +2,5 @@
 *.out
 cmake-build-debug/
 .idea/
+build/
 */**/build/

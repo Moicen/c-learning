@@ -1,17 +1,25 @@
-cmake_minimum_required (VERSION 2.6)
+cmake_minimum_required (VERSION 3.10)
 project (c-learning)
-add_executable(c-learning hello.c itoa.c)
+
 # The version number.
-set (c-learning_VERSION_MAJOR 1)
-set (c-learning_VERSION_MINOR 0)
+set (c_learning_VERSION_MAJOR 1)
+set (c_learning_VERSION_MINOR 0)
 
 # configure a header file to pass some of the CMake settings
 # to the source code
 configure_file (
-        "${PROJECT_SOURCE_DIR}/Config.h.in"
-        "${PROJECT_BINARY_DIR}/Config.h"
+    "${PROJECT_SOURCE_DIR}/Config.h.in"
+    "${PROJECT_BINARY_DIR}/Config.h"
 )
 
 # add the binary tree to the search path for include files
 # so that we will find Config.h
 include_directories("${PROJECT_BINARY_DIR}")
+
+# add extra library
+include_directories ("${PROJECT_SOURCE_DIR}/csapp")
+add_subdirectory (csapp)
+
+# add the executable
+add_executable(c-learning test.c)
+target_link_libraries (c-learning csapp)
