@@ -25,5 +25,6 @@ add_executable(pract csapp-test.c)
 target_link_libraries (pract csapp)
 
 add_library(itoa itoa.c)
+add_library(sundry sundry.c)
 add_executable(hello hello.c)
-target_link_libraries(hello itoa)
+target_link_libraries(hello itoa sundry)

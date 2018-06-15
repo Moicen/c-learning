@@ -11,9 +11,10 @@ char *int2str(char *s, int num) {
         size += (int) ceil(log10(n));
     }
     s = (char *) malloc(size + 1);
-    size_t i;
-    for (i = size - 1; i >= 0; i--) {
+    int i;
+    for (i = (int)size - 1; i >= 0; i--) {
         s[i] = n % 10 + '0';
+        printf("n: %d, i: %d, s[i]: %c, s: %s\n", n, i, s[i], s);
         n = (int) floor(n / 10);
     }
     if (num < 0) s[0] = '-';
